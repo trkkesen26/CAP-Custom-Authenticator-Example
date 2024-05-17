@@ -1,0 +1,37 @@
+{
+  "name": "custom-auth-app",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.12.9",
+    "@sap/cds": "^7",
+    "cookie-session": "^2.1.0",
+    "express": "^4",
+    "passport": "^0.5.3",
+    "passport-github2": "^0.1.12"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7",
+    "@sap/eslint-plugin-cds": "^3",
+    "@sap/ux-specification": "^1.120.10",
+    "eslint": "^9"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-custom-auth": "cds watch --open custom-auth/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "requires": {
+    "auth": {
+      "impl": "./auth/handler.js"
+    }
+  },
+  "cds": {
+    "cov2ap": {
+      "plugin": true
+    }
+  }
+}
